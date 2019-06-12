@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>跳转中</title>
+ 
+
+</head>
+<body>
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <strong>请按照下方说明操作，允许微信打开</strong>
+  </div>
+  <div class="container text-center">
+    <figure class="figure">
+      <img src="./sneakers.jpg" class="figure-img img-fluid rounded" alt="sneakers">
+      <figcaption class="figure-caption font-weight-bold">更多鞋款加微信：</figcaption>
+    </figure>
+    <p class="display-3 font-weight-bold text-info">NK5913</p>
+    <button type="button" class="jump_btn btn btn-warning btn-primary btn-lg">复制微信号 打开微信</button>
+    <br/>
+    <small class="text-muted">若3秒无反应,请重试点击跳转</small>
+    <br/>
+    <br/>
+    <img src="./wxcc.jpg" class="figure-img img-fluid rounded">
+  </div>
+  
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/clipboard.js/2.0.0/clipboard.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+  <script>  function jumpweixin(){if(!/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){if(/ baiduboxapp/i.test(navigator.userAgent)){window.location.replace("bdbox://utils?action=sendIntent&minver=7.4&params=%7B%22intent%22%3A%22weixin://%23wechat_redirect%23Intent%3Bend%22%7D");}else{window.location.replace("weixin://");}}else{window.location.replace("weixin://");}   }var clipboard = new ClipboardJS(".jump_btn", {text: function () {return "nk5913";}} );clipboard.on( "success", function ( e ) {jumpweixin();} );clipboard.on( "error", function ( e ) {window.location.replace("weixin://");console.log( e );} );</script> 
+
+</div>
+</body>
+</html>
